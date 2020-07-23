@@ -104,7 +104,7 @@ h1{
     margin: auto;
 }
 
-#about h2{
+#about h2 {
     margin: 30px 0;
     color: var(--primary-color);
 
@@ -321,7 +321,8 @@ h1{
 }
 
 .gallery{
-    margin-top: 320px;
+    margin-top: 300px;
+    margin-bottom: 200px;
 }
 
 /* fade in animation */
@@ -335,4 +336,16 @@ h1{
     opacity: 0;
     animation: fadeIn 0.5s ease-in 1 forwards;
 }
-
+/* media */
+@media (max-width: 600px){
+    .imgs{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery h2{
+        font-size: 90px;
+        font-weight: 300;
+    }
+    #about h1 {
+        font-size: 90px;
+    }
+}
