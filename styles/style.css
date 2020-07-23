@@ -2,7 +2,7 @@
 
 :root{
     --primary-color:#3a4052;
-    --overlay-color:rgba(24, 39, 51 , 0.85);
+    --overlay-color:rgba(24, 39, 51 , 0.98);
     --menu-speed: 0.75s;
 }
 
@@ -112,7 +112,21 @@ h1{
 
 .social a{
     margin: 0 5px;
+    transition: all .5s;
 }
+
+.social a:hover:nth-child(1){
+    color: #55acee;
+}
+
+.social a:hover:nth-child(2){
+    color: #3b5999;
+}
+.social a:hover:nth-child(3){
+    color: #e4405f;
+}
+
+
 
 /* hamburger style */
 .menu-wrap{
@@ -255,9 +269,70 @@ h1{
     padding: 1rem;
 }
 
-.menu-wrap .menu > div > div > ul > li > a{
+.menu-wrap .menu > div > div > ul > li > a {
     color: inherit;
     text-decoration: none;
+    font-size: 40px;
     transition: color 0.4s ease;
 
 }
+
+.menu-wrap .menu > div > div > ul > li > a:hover{
+    color: blue;
+
+}
+
+
+
+
+
+/* Galery style */
+.gallery{
+    margin: 20px;
+    padding: 0;
+}
+.img-container{
+    max-width: 760px;
+    margin: auto;
+    border: #fff solid 3px;
+    background: #333;
+}
+
+.main-img img,
+.imgs img{
+    width: 100%;
+}
+.imgs img{
+    cursor: pointer;
+}
+
+.imgs{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+.gallery h2{
+    text-align: center;
+    margin: 30px 0;
+    color: var(--primary-color);
+    font-weight: 300;
+    font-size: 120px;
+    line-height: 1.2;
+}
+
+.gallery{
+    margin-top: 320px;
+}
+
+/* fade in animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
